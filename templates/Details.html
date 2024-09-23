@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block main_content %}
+<div class="container my-5">
+    <div class="card shadow-3">
+        <div class="card-header text-center py-4">
+            <h2 class="mb-0 text-uppercase text-primary">Product Details</h2>
+            <p class="text-muted">Access Code: <strong>{{ access_code.code }}</strong></p>
+        </div>
+        <div class="card-body px-4 py-5">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h6 class="font-weight-bold" style="color: black;">Email</h6>
+                    <p class="text-muted">{{ product_details.email }}</p>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="font-weight-bold" style="color: black;">Password</h6>
+                    <p class="text-muted">{{ product_details.password }}</p>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <h6 class="font-weight-bold" style="color: black;">Activation Code</h6>
+                    <p class="text-muted">{{ product_details.activation_code }}</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="font-weight-bold" style="color: black;">Product Link</h6>
+                    <a href="{{ product_details.product_link }}" class="text-primary" target="_blank">{{ product_details.product_link }}</a>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="font-weight-bold" style="color: black;">Order No</h6>
+                    <p class="text-muted">{{ product_details.order_no }}</p>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <h6 class="font-weight-bold" style="color: black;">Warranty Till</h6>
+                    <p class="text-muted">{{ product_details.warranty_till }}</p>
+                </div>
+                <div class="col-md-8">
+                    <h6 class="font-weight-bold" style="color: black;">Description</h6>
+                    <p class="text-muted">{{ product_details.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-center py-3">
+            <button class="btn btn-primary btn-lg">Download Product</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
